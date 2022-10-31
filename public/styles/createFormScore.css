@@ -1,0 +1,42 @@
+.createFormScore {
+    position: fixed;
+    display: none;
+    left:25%;
+    top: 10%;
+    z-index: 2;
+    border:1px solid black;
+    height: fit-content;
+    width:310px;
+    background-color: #ccc;
+    border: 3px solid black;
+    cursor:move
+}
+.createFormScore h4 {
+    margin-top:0;
+    text-align: center;
+    padding: 0.25rem;
+    background-color: #dddd;
+}
+.createUpdate {
+    border: 2px solid #aaa;
+    padding: 5px;
+}
+.createFormScore-2 {
+    display: flex;
+    justify-content:space-around;
+}
+.createFormScore .btn-container {
+    display: flex;
+    justify-content: space-around;
+}
+.fa-check {
+  color: dodgerblue;
+}
+.fa-times {
+color: red;
+
+}
+button:hover {
+    cursor: pointer;
+}
+

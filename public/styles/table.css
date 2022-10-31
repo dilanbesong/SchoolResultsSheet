@@ -1,0 +1,118 @@
+table {
+    margin: 0 auto;
+    margin-top:10%;
+    width:50%;
+}
+.fa-trash, .fa-pencil-square-o {
+    cursor: pointer;
+}
+.fa-trash {
+    color: red;
+    
+}
+.fa-pencil-square-o {
+    color: dodgerblue;
+}
+table {
+    border-collapse: collapse;
+}
+th {
+    background-color: rgb(34, 11, 11);
+    color: #fff;
+}
+ 
+th, td {
+    font-size: 0.8rem;
+    padding:1.2rem;
+}
+tr {
+    border-bottom-style: ridge;
+}
+td.name {
+    color: dodgerblue;
+}
+.hide {
+    display: none;
+}
+.modelClose {
+    position: absolute;
+    right:3%;
+    top:3%;
+    width:18px;
+    height:18px;
+    color: #fff;
+    border-radius:50%;
+    background-color: red;
+    text-align: center;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width:800px) {
+    table {
+        margin:0 auto;
+        margin-top:15%;
+        width: 85%;
+        border-collapse: initial;
+    }
+    thead {
+        display: none;
+    }
+    tbody tr {
+        background-color: rgb(0, 0, 0, 0.67);
+        color: #fff;
+        padding-top:0.2rem;
+    }
+     tbody tr td {
+            display: flex;
+            padding: 0.50rem;
+            justify-content: space-between;
+            font-size:1rem;
+            border-bottom-style:groove;
+     }
+  tbody tr td:hover {
+    cursor: pointer;
+    background-color: #aaa;
+  }
+
+  tr td:nth-child(1) {
+    color: yellowgreen;
+  }
+
+  tr td:nth-child(1)::before{
+    content: 'Name:';
+    font-size: 1.1rem;
+    color: yellowgreen;  
+  }
+   tr td:nth-child(2)::before {
+       content: 'Reg Number:';
+       font-size: 1.1rem;
+   }
+  tr td:nth-child(3)::before {
+            content: 'Practical:';
+            font-size: 1.1rem;
+   }
+   tr td:nth-child(4)::before {
+       content: 'C.A:';
+       font-size: 1.1rem;
+   }
+   tr td:nth-child(5)::before {
+       content: 'Exam:';
+       font-size: 1.1rem;
+   }
+
+   tr td:nth-child(6)::before {
+       content: 'Grade:';
+       font-size: 1.1rem;
+   }
+
+   tr td:nth-child(7)::before {
+       content: 'Delete:';
+       font-size: 1.1rem;
+   }
+
+   tr td:nth-child(8)::before {
+       content: 'Edit:';
+       font-size: 1.1rem;
+   }
+}

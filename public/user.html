@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/admin.css">
+    <link rel="stylesheet" href="./styles/table.css">
+    <script src="./Js/reuseFn.js"></script>
+    <script src="./Js/animate.js" defer></script>
+    <script src="./Js/user.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+        <div>
+            <input type="search" placeholder="&#x1F50D" />
+        </div>
+    </nav>
+
+    <aside class="showSideBar">
+
+        <div class="admin-header">
+            <h3 data-username>Dilan</h3>
+            <div class="underline"></div>
+        </div>
+        <ul class="side-bar-list">
+            <li><i class="fa fa-home fa-lg" aria-hidden="true"></i>Home</li>
+            <li><i class="fa fa-plus-circle fa-lg" aria-hidden="true"></i>Create</li>
+            <li><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>Logout</li>
+            <li><i class="fa fa-search fa-lg" aria-hidden="true"></i>Find</li>
+        </ul>
+    </aside>
+
+
+
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Reg Number</th>
+            <th>Practo</th>
+            <th>C.A</th>
+            <th>Exam</th>
+            <th>Grade</th>
+            <th>Date</th>
+        </thead>
+        <tbody>
+            <!-- <tr>
+                <td class="name"><i class="fa fa-user-o fa-lg" aria-hidden="true"></i> Dilan</td>
+                <td>2019030187292</td>
+                <td>15</td>
+                <td>15</td>
+                <td>A</td>
+                <td>12/07/2022</td>
+            </tr> -->
+           
+        </tbody>
+    </table>
+
+    <template data-Scoretemplate>
+        <tr>
+            <td class="name"><i class="fa fa-user-o fa-lg" aria-hidden="true"></i> Dilan</td>
+            <td data-regNum></td>
+            <td data-practo></td>
+            <td data-ca></td>
+            <td data-exam></td>
+            <td data-grade></td>
+            <td data-date></td>
+        </tr>
+    </template>
+
+
+</body>
+
+</html>

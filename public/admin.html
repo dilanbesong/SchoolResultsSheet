@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./styles/admin.css">
+     <link rel="stylesheet" href="./styles/table.css">
+     <link rel="stylesheet" href="./styles/createFormScore.css">
+     <script src="./Js/animate.js" defer></script>
+     <script src="./Js/reuseFn.js" defer></script>
+     <script src="./Js/admin.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+      <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+      <div>
+         <input type="search" placeholder="&#x1F50D find student"/>
+      </div>
+    </nav>
+    
+    <aside class="showSideBar">
+
+        <div class="admin-header">
+           <h3>Admin</h3>
+           <div class="underline"></div>
+        </div>
+        <ul class="side-bar-list">
+            <li><i class="fa fa-home fa-lg" aria-hidden="true"></i>Home</li>
+            <li data-openModel><i class="fa fa-plus-circle fa-lg" aria-hidden="true"></i>Create</li>
+            <li><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>Logout</li>
+            <li><i class="fa fa-search fa-lg" aria-hidden="true"></i>Find</li>
+        </ul>
+    </aside>
+
+
+   
+      <table>
+           <thead>
+            <th>Name</th>
+             <th>Reg Number</th>
+             <th>Practo</th>
+             <th>C.A</th>
+             <th>Exam</th>
+             <th>Grade</th>
+             <th>Delete</th>
+             <th>Edit</th>
+             
+           </thead>
+           <tbody>
+            
+    
+           </tbody>
+      </table>
+
+     <form class="createFormScore" action='/admin/addRecord' method="post">
+        <span class="modelClose">&times</span>
+            <h4>CREATE/UPDATE SCORE</h4>
+           <div class="createFormScore-2">
+            <div class="createUpdate">
+               
+                <p>
+                    <label>Reg Num :</label>
+                    <input required type="text" name="regNumber"  
+                    placeholder="reg Number" id="regNumberInput" minlength="13" maxlength="13">
+                </p>
+                <p>
+                    <label>Exam :</label>
+                    <input required type="text" name="examScore"
+                     data-input placeholder="exam" id="examScoreInput" maxlength="2">
+                </p>
+                <p>
+                    <label>C.A :</label>
+                    <input required type="text" 
+                    name="continousAccessment" data-input placeholder="c.a" id="c_aScoreInput" maxlength="2">
+                </p>
+                <p>
+                    <label>Practical :</label>
+                    <input required type="text" 
+                    name="practicalScore" data-input placeholder="practical score" id="practicalScoreInput" maxlength="2">
+                </p>
+            </div>
+            <div class="New">
+                <p>New record</p>
+                <p> <button data-clear>+</button> </p>
+            </div>
+           </div>
+           <div class="btn-container">
+            <p> <button data-addScore type="submit">put</button> </p>
+            <p> <button disabled><i class="fa fa-check" aria-hidden="true"></i></button> </p>
+           </div>
+        </form>
+
+        <template data-Scoretemplate>
+            <tr>
+                <td class="name"><i class="fa fa-user-o fa-lg" aria-hidden="true"></i> Dilan</td>
+                <td data-regNum>2019030187292</td>
+                <td data-practo>10</td>
+                <td data-ca>10</td>
+                <td data-exam>10</td>
+                <td data-grade>A</td>
+                <td data-delete><i class="fa fa-trash fa-lg" aria-hidden="true"></i> </td>
+                <td data-pencilSquare><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> </td>
+            </tr>
+        </template>
+
+    
+</body>
+</html>
