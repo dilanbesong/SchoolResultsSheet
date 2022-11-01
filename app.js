@@ -37,10 +37,15 @@ app.post('/admin', (req, res) => {
   }
 })
 
+
 app.get('/user/:matricNumber', async( req, res) => {
    const { matricNumber } = req.params
-   const user = await Student.findOne({matricNumber})
-   return res.send(user)
+  try {
+      const user = await Student.findOne(req.params)
+      return res.send(user)
+  } catch (error) {
+     return res.send('no user')
+  }
 })
 
 app.get('/results/:matricNumber', async(req, res) => {
