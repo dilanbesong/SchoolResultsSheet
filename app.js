@@ -3,7 +3,6 @@ const express = require('express')
 const mongoose = require('mongoose')
 const path = require('path')
 const cors = require('cors')
-const crypto = require('crypto')
 const { Student, Score } = require('./Schema/model')
 const adminServer  = require('./Route/adminServer')
 require('dotenv').config()
@@ -15,6 +14,9 @@ app.use('/admin', adminServer)
 app.use(cors())
 mongoose.connect(process.env.MONGO_URI)
 
+app.get('/', (req, res) => {
+  res.redirect('/signIn')
+})
 
 app.get('/signIn', (req, res) => {  
   res.sendFile(_path + '/signUp.html')
@@ -64,9 +66,9 @@ app.post('/signIn', async (req, res) => {
 
  app.get('/login/:password/:matricNumber', async (req, res) => {
     try {
-      const { password, matricNumber } = req.body
-      const student = await Student.find({email})
-      if(student.matricNumber) {
+      const { password, matricNumber } = req.params
+      const student = await Student.findOne({matricNumber})
+      if(student.password === password) {
         return res.send(student)
       }
     } catch (error) {
@@ -76,6 +78,6 @@ app.post('/signIn', async (req, res) => {
 
 
 app.listen(process.env.PORT || 5000, () => {
-    console.log('server is running...')
+    console.log(`server is running on https://localhost:${process.env.PORT}`)
 })
 

@@ -9,7 +9,10 @@ function loginFn(e) {
    const validatePassword = password.length >= 6 
    if(validateMatricNum && validatePassword){
        const loginUser = getData(`/login/${password}/${matricNumber}`)
-      loginUser.then( user => location.href = '/home').catch( err => alert(err.message))
+      loginUser.then( user => {
+         sessionStorage.setItem('matricNumber', matricNumber)
+         location.href = '/home'
+      }).catch( err => alert(err.message))
    }else {
      alert(`Your password must be greater than 6 characters
       or your matric number must include 20 and should be greater than 12 or create an account`)

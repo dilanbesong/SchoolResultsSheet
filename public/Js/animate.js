@@ -40,6 +40,7 @@ document.addEventListener('mouseup', () => {
 })
 
 const logoutButton = sideBar.querySelector('.fa-sign-out')
+console.log(logoutButton);
 logoutButton.addEventListener('click', () => location.href = '/signIn')
 
 
