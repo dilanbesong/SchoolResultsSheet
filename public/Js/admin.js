@@ -6,7 +6,7 @@ const scoreTemplate = document.querySelector('[data-Scoretemplate]')
 const tableBody = document.querySelector('tbody')
 const searchInput = document.querySelector('input[type="search"]')
 const displayScores = getData('/admin/getScores')
-
+const studentScores = document.querySelectorAll('[data-studentScores]')
 
 clearInputBtn.addEventListener('click', (e) => {
    e.preventDefault()
@@ -15,6 +15,8 @@ clearInputBtn.addEventListener('click', (e) => {
       input.value = ''
    })
 })
+
+
 
 function editFn(editBtn) { 
    editBtn.addEventListener('click', () => {

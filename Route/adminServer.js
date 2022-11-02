@@ -60,6 +60,8 @@ router.get('/deleteRecord/:resultId/:matricNumber', async(req, res) => {
    }
 })
 
+
+
 router.get('/myResults/:matricNumber', async(req, res) => {
   const { matricNumber } = req.params
    const student = await Student.findOne({matricNumber})
