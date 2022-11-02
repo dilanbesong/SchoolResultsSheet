@@ -82,7 +82,7 @@ app.post('/signIn', async (req, res) => {
  })
 
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log(`server is running on https://localhost:${process.env.PORT}`)
 })
 
